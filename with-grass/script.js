@@ -52,8 +52,6 @@ document.addEventListener('keyup', (event) => {
   
 }, false);
 
-const grass = new Image();
-grass.src = 'img/Kentucky_31.jpg'
 const skel = new Image();
 skel.src = 'img/skel.png';
 
@@ -91,14 +89,6 @@ function animate () {
   ctx.fillStyle = '#32a852';
 
   ctx.drawImage(
-    grass,
-    0,
-    0,
-    canvas.width,
-    canvas.height
-  );
-
-  ctx.drawImage(
     skel,
     frame * 64, // sx
     row * 64, // sy
@@ -112,7 +102,6 @@ function animate () {
   requestAnimationFrame(animate);
 
 }
-
 skel.addEventListener('load', function() {
   animate();
 }, false);
